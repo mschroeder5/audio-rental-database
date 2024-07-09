@@ -20,5 +20,6 @@ WHERE manufacturer = 'Shure';
 
 SELECT * FROM Products;
 UPDATE Products SET price=500 WHERE model="SM58"; --U for Update, updates SM58 mic's price to 500
-DELETE FROM Products WHERE model="SM57"; --D for Delete, deletes rcord for microphone of the model "Townsend"
+DELETE FROM Microphones WHERE model="SM57";  --D for Delete, deletes record for microphone of the model "SM57"
+DELETE FROM Products WHERE model="SM57";
 SELECT * FROM Products;
