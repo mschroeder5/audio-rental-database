@@ -14,12 +14,14 @@ SELECT *
 FROM Products
 WHERE price<100; --Finds all products that cost less than $100
 
-SELECT DISTINCT *
+SELECT DISTINCT Products.model, Products.manufacturer, Products.model, Microphones.polar_pattern
 FROM Products JOIN Microphones
-WHERE manufacturer = 'Shure';
+ON Products.manufacturer = Microphones.manufacturer
+WHERE Products.manufacturer = "Shure"; -- Finds all microphones within both tables with the manufacturer "Shure"
 
-SELECT * FROM Products;
 UPDATE Products SET price=500 WHERE model="SM58"; --U for Update, updates SM58 mic's price to 500
+SELECT * FROM Products;
+
 DELETE FROM Microphones WHERE model="SM57";  --D for Delete, deletes record for microphone of the model "SM57"
 DELETE FROM Products WHERE model="SM57";
 SELECT * FROM Products;
